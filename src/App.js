@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Text } from "@chakra-ui/react"
+import Menu from './Menu'
+import NewEmployee from './employees/New'
+import ListEmployees from './employees/List'
+import DeleteEmployee from './employees/Delete'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <Container centerContent>
+        <Router>
+          <Menu />
+          <Text fontSize="2xl">React Practice</Text>
+          <Switch>
+            <Route path="/employees/new">
+              <NewEmployee />
+            </Route>
+            <Route path="/employees/delete/:id">
+              <DeleteEmployee />
+            </Route>
+            <Route path="/employees">
+              <ListEmployees />
+            </Route>
+            <Route path="/">
+              Welcome to this practice. Navigate using the menu on the top.
+            </Route>
+          </Switch>
+        </Router>
+      </Container>
+    );
+  }
 }
 
 export default App;

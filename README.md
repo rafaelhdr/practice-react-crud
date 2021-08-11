@@ -6,8 +6,9 @@ This project was created from the command `npx create-react-app my-app` and cust
 
 ## Requirements
 
-- Python with virtualenv (to run the backend)
+- Docker
 - Understanding of React Router
+- Understanding of class component React and states
 
 \* This was tested using Linux running with the terminal
 
@@ -27,13 +28,21 @@ It explains the communication methods betweend the Frontend and the Backend. For
 
 ## Running the backend
 
-Change in a new terminal to the backend `cd backend`.
+Run these commands:
 
-And run:
-
-- `docker build -t practice-employees-backend .` (only once)
+- `docker build -t practice-employees-backend backend` (only once)
 - `docker run --rm -p 8000:8000 practice-employees-backend`
+
+Now, you should be able to open the page: [http://localhost:8000/](http://localhost:8000/).
+
+You also can access the admin (from Django) at [http://localhost:8000/admin/](http://localhost:8000/admin/) (username: `admin`, password: `password`).
 
 ## Practice
 
-Video:
+Overview: 
+
+- Fix the New.js to be able to add new users
+- Fix the Update.js to be able to edit existent users
+- Fix the Delete.js to be able to delete the existent users
+
+**Hard one** (but most important): after you fix everything, replicate everything, but now instead of handling employees, add the tasks.

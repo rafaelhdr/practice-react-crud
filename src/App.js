@@ -3,6 +3,7 @@ import { Container, Text } from "@chakra-ui/react"
 import Menu from './Menu'
 import NewEmployee from './employees/New'
 import ListEmployees from './employees/List'
+import UpdateEmployee from './employees/Update'
 import DeleteEmployee from './employees/Delete'
 import {
   BrowserRouter as Router,
@@ -21,6 +22,9 @@ class App extends React.Component {
           <Switch>
             <Route path="/employees/new">
               <NewEmployee />
+            </Route>
+            <Route path="/employees/edit/:id">
+              <UpdateEmployee />
             </Route>
             <Route path="/employees/delete/:id">
               <DeleteEmployee />

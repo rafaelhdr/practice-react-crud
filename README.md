@@ -39,7 +39,7 @@ You also can access the admin (from Django) at [http://localhost:8000/admin/](ht
 
 ## Practice
 
-Overview: 
+Overview: [video](https://www.loom.com/share/07fef74ab44749dd9fdd0f4e0159b376)
 
 - Fix the New.js to be able to add new users
 - Fix the Update.js to be able to edit existent users

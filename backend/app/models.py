@@ -10,3 +10,6 @@ class Employee(models.Model):
 class Task(models.Model):
     title = models.CharField(max_length=100)
     status = models.CharField(max_length=100)
+    done = models.BooleanField()
+    complexity = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)

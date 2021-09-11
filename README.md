@@ -46,3 +46,13 @@ Overview: [video](https://www.loom.com/share/07fef74ab44749dd9fdd0f4e0159b376)
 - Fix the Delete.js to be able to delete the existent users
 
 **Hard one** (but most important): after you fix everything, replicate everything, but now instead of handling employees, add the tasks.
+
+## Extra
+
+There are more fields in the tasks model. Try using:
+
+- Radio for status
+- Select for status
+- Number Input for complexity
+- Slider for complexity
+- Switch for done

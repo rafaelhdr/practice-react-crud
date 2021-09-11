@@ -26,6 +26,9 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=100)),
                 ('status', models.CharField(max_length=100)),
+                ('done', models.BooleanField()),
+                ('complexity', models.CharField(max_length=100)),
+                ('description', models.CharField(max_length=1000)),
             ],
         ),
     ]
